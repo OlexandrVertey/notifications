@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
       title: 'noti',
-      home: const LoginPage(),
+      home: const LoginPage(),///test
     );
   }
 }
