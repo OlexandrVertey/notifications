@@ -103,12 +103,12 @@ class _AddNewNotificationState extends State<AddNewNotification> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              25.0.hsb,
+              26.0.hsb,
               const Text(
                 "Message",
                 style: TextStyle(
@@ -122,13 +122,13 @@ class _AddNewNotificationState extends State<AddNewNotification> {
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 width: double.infinity,
-                height: 170,
+                height: 120,
                 decoration: BoxDecoration(
                   color: const Color(0xffFFFFFF),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: !_messageError ? const Color(0xffB9B9B9) : const Color(0xffF43528),
-                    width: 1.5,
+                    width: 1,
                   ),
                 ),
                 child: TextField(
@@ -160,7 +160,7 @@ class _AddNewNotificationState extends State<AddNewNotification> {
                 ),
               ),
               if(widget.oneTime)
-              25.0.hsb,
+              24.0.hsb,
               if(widget.oneTime)
               const Text(
                 "Type time",
@@ -185,7 +185,7 @@ class _AddNewNotificationState extends State<AddNewNotification> {
                   }
                 },
               ),
-              25.0.hsb,
+              24.0.hsb,
               const Text(
                 "Icon",
                 style: TextStyle(
@@ -201,18 +201,18 @@ class _AddNewNotificationState extends State<AddNewNotification> {
                   Container(
                     height: 80,
                     width: 80,
-                    padding: const EdgeInsets.all(17),
+                    padding: const EdgeInsets.all(22),
                     decoration: BoxDecoration(
                       color: _color,
                       shape: BoxShape.circle,
                       border: Border.all(
                         color: const Color(0xffB9B9B9),
-                        width: 1.5,
+                        width: 1,
                       ),
                     ),
                     child: SvgPicture.asset("assets/images/$_icon"),
                   ),
-                  15.0.wsb,
+                  16.0.wsb,
                   InkWell(
                     onTap: () {
                       showModalBottomSheet(
@@ -235,13 +235,13 @@ class _AddNewNotificationState extends State<AddNewNotification> {
                       );
                     },
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 11),
+                      padding: const EdgeInsets.symmetric(horizontal: 43, vertical: 10),
                       decoration: BoxDecoration(
                         color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
                           color: const Color(0xff6A4DBA),
-                          width: 1.5,
+                          width: 1,
                         ),
                       ),
                       child: const Text(

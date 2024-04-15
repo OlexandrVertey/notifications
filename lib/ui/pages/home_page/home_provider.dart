@@ -18,7 +18,6 @@ class HomeProvider extends ChangeNotifier {
   }
 
   Future<void> getNotifications() async {
-    print("------getNotifications provider");
     try{
       homeState.listOneTimeNotificationsModel = await oneTimeDB.getOneTimeDB();
     } catch(e) {
@@ -48,7 +47,6 @@ class HomeProvider extends ChangeNotifier {
   }
 
   Future<void> updateOneTimeDB({required OneTimeNotificationsModel oneTimeNotificationsModel}) async {
-    print("------getNotifications provider");
     try{
       await AwesomeNotifications().cancel(oneTimeNotificationsModel.id!);
       NotificationService.showNotification(
@@ -69,7 +67,6 @@ class HomeProvider extends ChangeNotifier {
   }
 
   Future<void> deleteItemOneTimeDB({required int id}) async {
-    print("------getNotifications provider");
     try{
       await AwesomeNotifications().cancel(id);
       await oneTimeDB.deleteItem(id);

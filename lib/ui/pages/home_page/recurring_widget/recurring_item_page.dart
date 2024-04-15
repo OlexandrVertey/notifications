@@ -4,6 +4,8 @@ import 'package:notifications/constants/text_fonts.dart';
 import 'package:notifications/extension/sized_box_extension.dart';
 import 'package:notifications/ui/pages/add_new_notification/add_new_notification.dart';
 import 'package:notifications/ui/pages/home_page/recurring_widget/recurring_provider.dart';
+import 'package:notifications/ui/pages/select_trigers/select_triger_one.dart';
+import 'package:notifications/ui/pages/select_trigers/select_triger_two.dart';
 import 'package:provider/provider.dart';
 
 class RecurringItemPage extends StatefulWidget {
@@ -97,13 +99,13 @@ class _RecurringItemPageState extends State<RecurringItemPage> {
                         },
                         child: Container(
                           margin: const EdgeInsets.only(top: 15),
-                          padding: const EdgeInsets.all(15),
+                          padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
                             color: const Color(0xffF8FAFB),
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(
                               color: const Color(0xff6A4DBA),
-                              width: 2,
+                              width: 1,
                             ),
                           ),
                           child: Column(
@@ -207,6 +209,78 @@ class _RecurringItemPageState extends State<RecurringItemPage> {
                                       color: Color(0xff1A1717),
                                       fontWeight: FontWeight.w700,
                                       fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Expanded(
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => SelectTrigerOne(),
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                        margin: EdgeInsets.only(top: 16),
+                                        padding: EdgeInsets.symmetric(horizontal: 33.5, vertical: 10),
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(10),
+                                          border: Border.all(
+                                            color: const Color(0xff6A4DBA),
+                                            width: 1,
+                                          ),
+                                        ),
+                                        child: Text(
+                                          "Select triger 1",
+                                          style: TextStyle(
+                                            fontFamily: NotificationsAppFonts.RobotoBold,
+                                            color: Color(0xff6A4DBA),
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  13.0.wsb,
+                                  Expanded(
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) => SelectTrigerTwo(),
+                                          ),
+                                        );
+                                      },
+                                      child: Container(
+                                        margin: EdgeInsets.only(top: 16),
+                                        padding: EdgeInsets.symmetric(horizontal: 33.5, vertical: 10),
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(10),
+                                          border: Border.all(
+                                            color: const Color(0xff6A4DBA),
+                                            width: 1,
+                                          ),
+                                        ),
+                                        child: Text(
+                                          "Select triger 2",
+                                          style: TextStyle(
+                                            fontFamily: NotificationsAppFonts.RobotoBold,
+                                            color: Color(0xff6A4DBA),
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ],

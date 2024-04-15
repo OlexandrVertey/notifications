@@ -7,6 +7,8 @@ import 'package:notifications/extension/sized_box_extension.dart';
 import 'package:notifications/models/notifications_model.dart';
 import 'package:notifications/ui/pages/add_new_notification/add_new_notification.dart';
 import 'package:notifications/ui/pages/home_page/home_provider.dart';
+import 'package:notifications/ui/pages/select_trigers/select_triger_one.dart';
+import 'package:notifications/ui/pages/select_trigers/select_triger_two.dart';
 import 'package:provider/provider.dart';
 
 class OneTimeWidget extends StatefulWidget {
@@ -157,6 +159,7 @@ class _OneTimeWidgetState extends State<OneTimeWidget> {
                           ),
                           10.0.hsb,
                           Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
                                 'Message:',
@@ -168,13 +171,87 @@ class _OneTimeWidgetState extends State<OneTimeWidget> {
                                 ),
                               ),
                               5.0.wsb,
-                              Text(
-                                widget.listOneTimeNotificationsModel[index].message,
-                                style: const TextStyle(
-                                  fontFamily: NotificationsAppFonts.RobotoBold,
-                                  color: Color(0xff1A1717),
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 14,
+                              Expanded(
+                                child: Text(
+                                  widget.listOneTimeNotificationsModel[index].message,
+                                  style: const TextStyle(
+                                    fontFamily: NotificationsAppFonts.RobotoBold,
+                                    color: Color(0xff1A1717),
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => SelectTrigerOne(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 16),
+                                    padding: EdgeInsets.symmetric(horizontal: 33.5, vertical: 10),
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                        color: const Color(0xff6A4DBA),
+                                        width: 1,
+                                      ),
+                                    ),
+                                    child: Text(
+                                      "Select triger 1",
+                                      style: TextStyle(
+                                        fontFamily: NotificationsAppFonts.RobotoBold,
+                                        color: Color(0xff6A4DBA),
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              13.0.wsb,
+                              Expanded(
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => SelectTrigerTwo(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 16),
+                                    padding: EdgeInsets.symmetric(horizontal: 33.5, vertical: 10),
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                        color: const Color(0xff6A4DBA),
+                                        width: 1,
+                                      ),
+                                    ),
+                                    child: Text(
+                                      "Select triger 2",
+                                      style: TextStyle(
+                                        fontFamily: NotificationsAppFonts.RobotoBold,
+                                        color: Color(0xff6A4DBA),
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
@@ -187,20 +264,20 @@ class _OneTimeWidgetState extends State<OneTimeWidget> {
               ),
               InkWell(
                 onTap: () {
-                  print('------_Add new notification');
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const AddNewNotification(
-                        changeNotification: false,
-                        oneTime: true,
-                      ),
+                      // builder: (context) => const AddNewNotification(
+                      //   changeNotification: false,
+                      //   oneTime: true,
+                      // ),
+                      builder: (context) => const SelectTrigerOne(),
                     ),
                   );
                 },
                 child: Container(
                   margin: EdgeInsets.only(top: 24),
                   width: double.infinity,
-                  height: 55,
+                  height: 48,
                   decoration: BoxDecoration(
                     color: const Color(0xff6A4DBA),
                     borderRadius: BorderRadius.circular(8),

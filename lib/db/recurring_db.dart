@@ -17,7 +17,6 @@ class RecurringDB {
   }
 
   Future<Database> _initDatabase(int version) async {
-    print('------database 2 = ${version}');
     final databasePath = await getDatabasesPath();
     final path = join(databasePath, 'recurringDB.db');
     return await openDatabase(

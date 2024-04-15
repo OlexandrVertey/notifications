@@ -29,8 +29,10 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: const Color(0xffFFFFFF),
           appBar: AppBar(
             elevation: 0.0,
-            backgroundColor: const Color(0xff1A1717),
+            // backgroundColor: const Color(0xff1A1717),
+            backgroundColor: Colors.red,
             automaticallyImplyLeading: false,
+            centerTitle: true,
             title: const Text(
               "Notifications",
               style: TextStyle(
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 color: const Color(0xff1A1717),
                 child: Container(
-                  padding: const EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
                     color: const Color(0xffF3F3F4),
                     borderRadius: BorderRadius.circular(8),
@@ -65,11 +67,11 @@ class _HomePageState extends State<HomePage> {
                         child: InkWell(
                           onTap: () => context.read<HomeProvider>().selectNotifications(isOneTime: true),
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                             decoration: BoxDecoration(
                               color: value.homeState.isOneTime
                                   ? const Color(0xff6A4DBA)
-                                  : const Color(0xffFFFFFF),
+                                  : const Color(0xffF3F3F4),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Row(
@@ -81,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                                       ? const Color(0xffFFFFFF)
                                       : const Color(0xff1A1717),
                                 ),
-                                5.0.wsb,
+                                6.0.wsb,
                                 Text(
                                   'One-time',
                                   style: TextStyle(
@@ -102,10 +104,10 @@ class _HomePageState extends State<HomePage> {
                         child: InkWell(
                           onTap: () => context.read<HomeProvider>().selectNotifications(isOneTime: false),
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                             decoration: BoxDecoration(
                               color: value.homeState.isOneTime
-                                  ? const Color(0xffFFFFFF)
+                                  ? const Color(0xffF3F3F4)
                                   : const Color(0xff6A4DBA),
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -118,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                                       ?  const Color(0xff1A1717)
                                       : const Color(0xffFFFFFF),
                                 ),
-                                5.0.wsb,
+                                6.0.wsb,
                                 Text(
                                   'Recurring',
                                   style: TextStyle(

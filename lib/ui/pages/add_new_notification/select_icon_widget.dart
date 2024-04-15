@@ -34,7 +34,8 @@ class _SelectIconWidgetState extends State<SelectIconWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.65,
+      // height: MediaQuery.of(context).size.height * 0.65,
+      height: 473,
       padding: const EdgeInsets.all(15),
       decoration: const BoxDecoration(
         color: Color(0xffFFFFFF),
@@ -82,13 +83,13 @@ class _SelectIconWidgetState extends State<SelectIconWidget> {
               ),
             ],
           ),
-          15.0.hsb,
+          16.0.hsb,
           Container(
             width: double.infinity,
-            height: 2,
+            height: 1,
             color: const Color(0xffF3F3F4),
           ),
-          10.0.hsb,
+          16.0.hsb,
           const Text(
             'Background colors',
             style: TextStyle(
@@ -97,7 +98,7 @@ class _SelectIconWidgetState extends State<SelectIconWidget> {
               fontSize: 16,
             ),
           ),
-          15.0.hsb,
+          11.0.hsb,
           SizedBox(
             height: 70,
             child: ListView.builder(
@@ -141,7 +142,7 @@ class _SelectIconWidgetState extends State<SelectIconWidget> {
               },
             ),
           ),
-          15.0.hsb,
+          16.0.hsb,
           const Text(
             'Select icons',
             style: TextStyle(
@@ -150,7 +151,7 @@ class _SelectIconWidgetState extends State<SelectIconWidget> {
               fontSize: 16,
             ),
           ),
-          10.0.hsb,
+          11.0.hsb,
           SizedBox(
             height: 70,
             child: ListView.builder(
@@ -205,10 +206,10 @@ class _SelectIconWidgetState extends State<SelectIconWidget> {
               Navigator.pop(context);
             },
             child: Container(
-              margin: const EdgeInsets.only(bottom: 20),
+              margin: const EdgeInsets.only(bottom: 34),
               alignment: Alignment.center,
               width: double.infinity,
-              height: 55,
+              height: 56,
               decoration: BoxDecoration(
                 color: const Color(0xff6A4DBA),
                 borderRadius: BorderRadius.circular(8),

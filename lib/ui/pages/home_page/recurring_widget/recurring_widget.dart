@@ -35,8 +35,9 @@ class _RecurringWidgetState extends State<RecurringWidget> {
       },
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            // height: 56,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

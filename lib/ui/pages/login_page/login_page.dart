@@ -36,6 +36,7 @@ class _LoginPageState extends State<LoginPage> {
         elevation: 0.0,
         backgroundColor: const Color(0xff1A1717),
         automaticallyImplyLeading: false,
+        centerTitle: true,
         title: const Text(
           "Log In",
           style: TextStyle(
@@ -82,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Color(0xff1A1717),
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 45),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

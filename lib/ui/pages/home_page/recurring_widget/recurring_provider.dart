@@ -14,7 +14,6 @@ class RecurringProvider extends ChangeNotifier {
   int _interval = 0;
 
   Future<void> getNotifications({required String repeatTime}) async {
-    print("------getNotifications provider");
     try{
       recurringState.listRecurringNotificationsModel = await recurringDB.getRecurringDB();
         recurringState.listRecurringNotificationsModel =
@@ -35,7 +34,6 @@ class RecurringProvider extends ChangeNotifier {
     }
     try{
       await recurringDB.createRecurringDB(recurringModel);
-      print('--------_interval = ${_interval}');
       NotificationService.showNotification(
         title: "noti",
         body: recurringModel.message,
